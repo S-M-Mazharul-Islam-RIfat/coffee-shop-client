@@ -60,8 +60,8 @@ const ManageAllUsers = () => {
          <div>
             <SectionTitle heading={"Manage All User"}></SectionTitle>
          </div>
-         <div className="py-6">
-            <table className="table w-[80%] mx-auto bg-zinc-300 rounded-lg">
+         <div className="w-full md:w-[85%] mx-auto mt-8">
+            <table className="table bg-zinc-300 rounded-lg">
                <thead>
                   <tr className="leading-8 bg-zinc-500 text-white">
                      <th>#</th>

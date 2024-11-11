@@ -53,7 +53,7 @@ const AddCoffee = () => {
             <SectionTitle heading={"Add Coffee"}></SectionTitle>
          </div>
 
-         <div className="w-full md:w-[80%] mx-auto">
+         <div className="w-full md:w-[85%] mx-auto mt-8">
             <form onSubmit={handleSubmit(onSubmit)}>
                <div className="form-control w-full mt-6">
                   <label className="label">

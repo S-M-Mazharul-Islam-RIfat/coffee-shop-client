@@ -16,6 +16,7 @@ import PrivateRoute from "./PrivateRoute";
 import AdminRoute from "./AdminRoute";
 import Payment from "../Pages/DashBoard/User/Payment/Payment";
 import MyCart from "../Pages/DashBoard/User/MyCart/MyCart";
+import CoffeeDetails from "../Pages/CoffeeDetails/CoffeeDetails";
 
 
 export const router = createBrowserRouter([
@@ -30,6 +31,11 @@ export const router = createBrowserRouter([
          {
             path: 'menu',
             element: <Menu></Menu>
+         },
+         {
+            path: 'coffee/:id',
+            element: <CoffeeDetails></CoffeeDetails>,
+            loader: ({ params }) => fetch(`http://localhost:5000/coffee/${params.id}`)
          },
          {
             path: 'login',

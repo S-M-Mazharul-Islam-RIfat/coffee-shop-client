@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const CoffeeGallery = () => {
    return (
@@ -12,7 +13,7 @@ const CoffeeGallery = () => {
                Coffee Gallery
             </h2>
          </div>
-         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-10 my-16">
+         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-10 mt-16 mb-10">
             <div className="card w-96 mx-auto">
                <figure>
                   <img
@@ -69,6 +70,11 @@ const CoffeeGallery = () => {
                      alt="coffee8" />
                </figure>
             </div>
+         </div>
+         <div className="text-center mb-8">
+            <Link to={'/menu'}>
+               <button className="btn btn-outline mt-5">Order Coffee Now</button>
+            </Link>
          </div>
       </div>
    );

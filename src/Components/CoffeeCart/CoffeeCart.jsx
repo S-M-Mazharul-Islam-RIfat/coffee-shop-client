@@ -1,7 +1,8 @@
 import Swal from "sweetalert2";
 import useAuth from "../../Hooks/useAuth";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
+import useAdmin from "../../Hooks/useAdmin";
 
 const CoffeeCart = ({ singleCoffee }) => {
    const { _id, image, name, chef, price } = singleCoffee;
@@ -9,6 +10,7 @@ const CoffeeCart = ({ singleCoffee }) => {
    const navigate = useNavigate();
    const location = useLocation();
    const axiosSecure = useAxiosSecure();
+   const [isAdmin] = useAdmin();
    const fullDateAndTime = new Date();
    const date = `${fullDateAndTime.getDate()}-${fullDateAndTime.getMonth()}-${fullDateAndTime.getFullYear()}`
    const time = `${fullDateAndTime.getHours()}:${(fullDateAndTime.getMinutes() >= 0 && fullDateAndTime.getMinutes() <= 9) ? '0' + fullDateAndTime.getMinutes() : fullDateAndTime.getMinutes()}:${(fullDateAndTime.getSeconds() >= 0 && fullDateAndTime.getSeconds() <= 9) ? '0' + fullDateAndTime.getSeconds() : fullDateAndTime.getSeconds()}`;
@@ -38,6 +40,7 @@ const CoffeeCart = ({ singleCoffee }) => {
                showConfirmButton: false,
                timer: 1500
             });
+
          }
       }
       else {
@@ -70,8 +73,8 @@ const CoffeeCart = ({ singleCoffee }) => {
             <p><span className="text-[1.1rem] font-medium">Chef: </span>{chef}</p>
             <p><span className="text-[1.1rem] font-medium">Price: </span>{price}$</p>
             <div className="card-actions gap-5 flex pt-3">
-               <button className="btn btn-outline">View Details</button>
-               <button onClick={handleAddToCart} className="btn btn-outline">Order Now</button>
+               <Link to={`/coffee/${_id}`}><button className="btn btn-outline">View Details</button></Link>
+               <button disabled={isAdmin} onClick={handleAddToCart} className="btn btn-outline">Order Now</button>
             </div>
          </div>
       </div>

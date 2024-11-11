@@ -26,8 +26,8 @@ const ManageOrders = () => {
          <div>
             <SectionTitle heading={"Manage Orders"}></SectionTitle>
          </div>
-         <div>
-            <table className="table w-[80%] mx-auto bg-zinc-300 rounded-lg mt-8">
+         <div className="w-full md:w-[85%] mx-auto mt-8">
+            <table className="table bg-zinc-300 rounded-lg mt-8">
                <thead>
                   <tr className="leading-8 bg-zinc-500 text-white">
                      <th>#</th>

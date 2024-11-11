@@ -2,10 +2,21 @@ import { Link, NavLink } from "react-router-dom";
 import Swal from "sweetalert2";
 import useAuth from "../../../Hooks/useAuth";
 import useAdmin from "../../../Hooks/useAdmin";
+import { useEffect, useState } from "react";
+import useAxiosPublic from "../../../Hooks/useAxiosPublic";
 
 const NavBar = () => {
    const { user, logOut } = useAuth();
    const [isAdmin] = useAdmin();
+   const axiosPublic = useAxiosPublic();
+   const [userInfo, setUserInfo] = useState([]);
+
+   useEffect(() => {
+      axiosPublic.get(`/allUsers/${user?.email}`)
+         .then(res => {
+            setUserInfo(res.data);
+         })
+   }, [axiosPublic, user?.email])
 
    const handleLogout = () => {
       logOut()
@@ -28,9 +39,16 @@ const NavBar = () => {
       <li>
          <NavLink to="/menu"><span className="font-bold rounded-md">MENU</span></NavLink>
       </li>
-      <li>
-         <NavLink to={`/dashboard/${isAdmin ? 'addCoffee' : 'myCart'}`}><span className="font-bold rounded-md">DASHBOARD</span></NavLink>
-      </li>
+      {
+         user &&
+         <li>
+            <NavLink to={`/dashboard/${isAdmin ? 'addCoffee' : 'myCart'}`}>
+               <span className="font-bold rounded-md flex gap-1">
+                  DASHBOARD
+               </span>
+            </NavLink>
+         </li>
+      }
       {
          user ? <li>
             <Link><button onClick={handleLogout} className="font-bold rounded-md">LOGOUT</button></Link>
@@ -43,7 +61,7 @@ const NavBar = () => {
    </>
 
    return (
-      <>
+      <div>
          <div className="navbar w-full bg-base-100 mx-auto sticky top-0 shadow-sm z-50 lg:pl-12 lg:pr-12">
             <div className="navbar-start">
                <div className="dropdown">
@@ -82,11 +100,11 @@ const NavBar = () => {
                   }
                </ul>
             </div>
-            <div className="navbar-end">
-               <a>{user?.email}</a>
+            <div className="navbar-end font-medium underline">
+               <a>{userInfo?.name}</a>
             </div>
          </div>
-      </>
+      </div>
    );
 };
 

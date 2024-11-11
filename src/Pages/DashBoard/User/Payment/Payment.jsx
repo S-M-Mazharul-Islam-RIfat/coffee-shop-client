@@ -7,7 +7,7 @@ const stripePromise = loadStripe(import.meta.env.VITE_Payment_Gateway_PK);
 
 const Payment = () => {
    return (
-      <div>
+      <div className="w-full md:w-[95%] mx-auto mt-8">
          <div>
             <SectionTitle heading={"Payment"}></SectionTitle>
          </div>
