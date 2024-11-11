@@ -16,7 +16,6 @@ const UpdateCoffee = () => {
 
 
    const onSubmit = async (data) => {
-      console.log(data);
       let imageURL = image
       if (data.image[0]) {
          const imageFile = { image: data.image[0] };
@@ -37,7 +36,6 @@ const UpdateCoffee = () => {
          price: data.price,
          image: imageURL
       }
-      console.log(updatedCoffee);
 
       const updatedCoffeeResult = await axiosSecure.patch(`/coffee/${_id}`, updatedCoffee);
 

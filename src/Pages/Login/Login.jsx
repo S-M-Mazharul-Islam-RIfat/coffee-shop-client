@@ -69,7 +69,6 @@ const Login = () => {
       if (userAlreadyExist.data) {
          signIn(currentUserEmail, currentUserPassword)
             .then(res => {
-               console.log(res);
                Swal.fire({
                   position: "top-end",
                   icon: "success",

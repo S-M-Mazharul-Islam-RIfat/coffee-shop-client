@@ -9,7 +9,6 @@ import SectionTitle from "../../../../Components/SectionTitle/SectionTitle";
 const ManageCoffee = () => {
    const [coffee, , refetch] = useCoffee();
    const axiosSecure = useAxiosSecure();
-   console.log(coffee);
 
    const handleDelete = singleCoffee => {
       Swal.fire({

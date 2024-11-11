@@ -35,7 +35,7 @@ export const router = createBrowserRouter([
          {
             path: 'coffee/:id',
             element: <CoffeeDetails></CoffeeDetails>,
-            loader: ({ params }) => fetch(`http://localhost:5000/coffee/${params.id}`)
+            loader: ({ params }) => fetch(`https://coffee-shop-server-ivory.vercel.app/coffee/${params.id}`)
          },
          {
             path: 'login',
@@ -63,7 +63,7 @@ export const router = createBrowserRouter([
          {
             path: 'updateCoffee/:id',
             element: <AdminRoute><UpdateCoffee></UpdateCoffee></AdminRoute>,
-            loader: ({ params }) => fetch(`http://localhost:5000/coffee/${params.id}`)
+            loader: ({ params }) => fetch(`https://coffee-shop-server-ivory.vercel.app/coffee/${params.id}`)
          },
          {
             path: 'manageOrders',

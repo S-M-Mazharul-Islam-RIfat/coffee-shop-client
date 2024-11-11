@@ -12,7 +12,6 @@ import useAdmin from "../Hooks/useAdmin";
 const Dashboard = () => {
    const [isOpen, setIsOpen] = useState(false);
    const [isAdmin] = useAdmin();
-   console.log(isAdmin);
 
    return (
       <div className="flex w-full">

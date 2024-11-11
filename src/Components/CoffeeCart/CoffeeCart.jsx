@@ -62,12 +62,12 @@ const CoffeeCart = ({ singleCoffee }) => {
 
    return (
       <div className="card bg-[#F5F4F1] w-96 shadow-2xl mx-auto">
-         <figure className="pt-5">
+         <div className="pt-5 mx-auto">
             <img
                src={image}
                alt="coffee"
                className="rounded-xl" />
-         </figure>
+         </div>
          <div className="card-body items-center text-center pt-2">
             <h2><span className="text-[1.1rem] font-medium">Name: </span>{name}</h2>
             <p><span className="text-[1.1rem] font-medium">Chef: </span>{chef}</p>

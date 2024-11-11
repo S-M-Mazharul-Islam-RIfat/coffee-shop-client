@@ -21,7 +21,6 @@ const AddCoffee = () => {
             'content-type': 'multipart/form-data'
          }
       })
-      console.log(res);
       if (res.data.success) {
          const newCoffee = {
             name: data.name,
@@ -32,9 +31,7 @@ const AddCoffee = () => {
             price: data.price,
             image: res.data.data.display_url
          }
-         console.log(newCoffee);
          const coffeeRes = await axiosSecure.post('/coffee', newCoffee);
-         console.log(coffeeRes.data);
          if (coffeeRes.data.insertedId) {
             Swal.fire({
                position: "center",

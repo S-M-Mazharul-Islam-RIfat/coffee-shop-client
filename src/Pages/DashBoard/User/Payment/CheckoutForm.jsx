@@ -54,7 +54,6 @@ const CheckoutForm = () => {
          setError(error.message);
       }
       else {
-         console.log('[PaymentMethod]', paymentMethod);
          setError('');
       }
 
@@ -68,12 +67,11 @@ const CheckoutForm = () => {
       })
 
       if (confirmError) {
-         console.log('Confirm error', confirmError);
+         //  
       }
       else {
          if (paymentIntent.status === 'succeeded') {
             setTransactionId(paymentIntent.id);
-            console.log(cart);
             const pendingPaymentCoffees = orders.filter(coffee => coffee.payment === 'pending')
             const payment = {
                email: user.email,
@@ -87,8 +85,6 @@ const CheckoutForm = () => {
             }
 
             const res = await axiosSecure.post('/payments', payment);
-            console.log('payment saved', res.data);
-            console.log(transactionId);
             refetch();
             if (res.data?.paymentResult?.insertedId) {
                Swal.fire({

@@ -5,7 +5,7 @@ const CoffeeGallery = () => {
       <div className="mt-12">
          <div className="md:w-[30%] mx-auto text-center my-4">
             <h2
-               className="text-[#331A15] text-3xl uppercase font-medium  py-4"
+               className="text-[#331A15] text-3xl uppercase font-medium py-4"
                style={{
                   textShadow: "1px 1px 5px rgba(255, 255, 255, 0.9)"
                }}
@@ -13,62 +13,46 @@ const CoffeeGallery = () => {
                Coffee Gallery
             </h2>
          </div>
-         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-10 mt-16 mb-10">
-            <div className="card w-96 mx-auto">
-               <figure>
-                  <img
-                     src="https://i.ibb.co.com/tmddTG8/cup1.png"
-                     alt="coffee1" />
-               </figure>
+         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-10 mt-16 mb-10 overflow-hidden">
+            <div className="card w-[20rem] mx-auto">
+               <img
+                  src="https://i.ibb.co.com/tmddTG8/cup1.png"
+                  alt="coffee1" />
             </div>
-            <div className="card w-96 mx-auto">
-               <figure>
-                  <img
-                     src="https://i.ibb.co.com/TmFVF8k/cup2.png"
-                     alt="coffee2" />
-               </figure>
+            <div className="card w-[20rem] mx-auto">
+               <img
+                  src="https://i.ibb.co.com/TmFVF8k/cup2.png"
+                  alt="coffee2" />
             </div>
-            <div className="card w-96 mx-auto">
-               <figure>
-                  <img
-                     src="https://i.ibb.co.com/jDp9M9D/cup3.png"
-                     alt="coffee3" />
-               </figure>
+            <div className="card w-[20rem] mx-auto">
+               <img
+                  src="https://i.ibb.co.com/jDp9M9D/cup3.png"
+                  alt="coffee3" />
             </div>
-            <div className="card w-96 mx-auto">
-               <figure>
-                  <img
-                     src="https://i.ibb.co.com/t8pBkm7/cup4.png"
-                     alt="coffee4" />
-               </figure>
+            <div className="card w-[20rem] mx-auto">
+               <img
+                  src="https://i.ibb.co.com/t8pBkm7/cup4.png"
+                  alt="coffee4" />
             </div>
-            <div className="card w-96 mx-auto">
-               <figure>
-                  <img
-                     src="https://i.ibb.co.com/hHgDxfy/cup5.png"
-                     alt="coffee5" />
-               </figure>
+            <div className="card w-[20rem] mx-auto">
+               <img
+                  src="https://i.ibb.co.com/hHgDxfy/cup5.png"
+                  alt="coffee5" />
             </div>
-            <div className="card w-96 mx-auto">
-               <figure>
-                  <img
-                     src="https://i.ibb.co.com/cFbwSF0/cup6.png"
-                     alt="coffee6" />
-               </figure>
+            <div className="card w-[20rem] mx-auto">
+               <img
+                  src="https://i.ibb.co.com/cFbwSF0/cup6.png"
+                  alt="coffee6" />
             </div>
-            <div className="card w-96 mx-auto">
-               <figure>
-                  <img
-                     src="https://i.ibb.co.com/KmjGYKq/cup7.png"
-                     alt="coffee7" />
-               </figure>
+            <div className="card w-[20rem] mx-auto">
+               <img
+                  src="https://i.ibb.co.com/KmjGYKq/cup7.png"
+                  alt="coffee7" />
             </div>
-            <div className="card w-96 mx-auto">
-               <figure>
-                  <img
-                     src="https://i.ibb.co.com/MVpPy8C/cup8.png"
-                     alt="coffee8" />
-               </figure>
+            <div className="card w-[20rem] mx-auto">
+               <img
+                  src="https://i.ibb.co.com/MVpPy8C/cup8.png"
+                  alt="coffee8" />
             </div>
          </div>
          <div className="text-center mb-8">

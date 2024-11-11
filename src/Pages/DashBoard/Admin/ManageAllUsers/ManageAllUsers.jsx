@@ -38,7 +38,6 @@ const ManageAllUsers = () => {
          email: user.email,
          role: user.role === "user" ? "admin" : "user"
       }
-      console.log(updatedUser, user._id);
       const res = await axiosSecure.patch(`/allUsers/${user._id}`, updatedUser)
       if (res.data.modifiedCount) {
          refetch();
