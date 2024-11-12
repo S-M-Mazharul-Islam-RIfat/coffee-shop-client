@@ -1,8 +1,31 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Coffee Shop
 
-Currently, two official plugins are available:
+This is an full stack fully responsive Coffee Shop Website.In this website user can order different types of coffee from the menu section and can make payment for the coffee through stripe.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- User can create account and login via firebase.
+- User can order coffee and can make payment through stripe.
+- User can see the order and payment history.
+- Admin can create account and login via firebase.
+- Admin can add,delete and manage coffee.
+- Admin can manage users.
+- Admin can check payment status and based on payment status admin can change coffee brewing status.
+- User and admin both have the dashboard.
+
+## Frontend Technology
+- React js
+- React router
+- Tailwind CSS
+- Daisy UI
+- React hook form
+- Axios
+- Firebase auth
+
+## Backend Technology
+- Node js
+- Express js
+- MongoDB
+
+## Payment Gateway
+- Stripe
