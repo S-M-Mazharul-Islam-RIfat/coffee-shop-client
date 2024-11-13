@@ -3,6 +3,14 @@
 
 This is an full stack fully responsive Coffee Shop Website.In this website user can order different types of coffee from the menu section and can make payment for the coffee through stripe.
 
+## Admin Credential & Demo Payment Card Details
+- Email - admin@gmail.com
+- Password - admiN12@
+- Card Number - 4242 4242 4242 4242
+- MM/YY - Future Month/Current Year
+- CVC - 123
+- ZIP - 12345
+
 ## Features
 - User can create account and login via firebase.
 - User can order coffee and can make payment through stripe.
