@@ -34,6 +34,7 @@ This is an full stack fully responsive Coffee Shop Website.In this website user 
 - Node js
 - Express js
 - MongoDB
+- JWT
 
 ## Payment Gateway
 - Stripe
