@@ -49,9 +49,10 @@ const NavBar = () => {
          </li>
       }
       {
-         user ? <li>
-            <Link><button onClick={handleLogout} className="font-bold rounded-md">LOGOUT</button></Link>
-         </li>
+         user ?
+            <li onClick={handleLogout} >
+               <Link><button className="font-bold rounded-md">LOGOUT</button></Link>
+            </li>
             :
             <li>
                <NavLink to="/login"><span className="font-bold rounded-md">LOGIN</span></NavLink>

@@ -2,6 +2,7 @@ import Swal from "sweetalert2";
 import SectionTitle from "../../../../Components/SectionTitle/SectionTitle";
 import useAxiosSecure from "../../../../Hooks/useAxiosSecure";
 import useOrders from "../../../../Hooks/useOrders";
+import { Helmet } from "react-helmet-async";
 
 const ManageOrders = () => {
    const [orders, , refetch] = useOrders();
@@ -23,6 +24,9 @@ const ManageOrders = () => {
 
    return (
       <div>
+         <Helmet>
+            <title>Dashboard | Manage Orders</title>
+         </Helmet>
          <div>
             <SectionTitle heading={"Manage Orders"}></SectionTitle>
          </div>

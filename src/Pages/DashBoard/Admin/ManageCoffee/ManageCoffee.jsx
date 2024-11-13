@@ -1,10 +1,9 @@
 import { Link } from "react-router-dom";
-import './ManageCoffee.css';
 import Swal from "sweetalert2";
 import useCoffee from "../../../../Hooks/useCoffee";
 import useAxiosSecure from "../../../../Hooks/useAxiosSecure";
 import SectionTitle from "../../../../Components/SectionTitle/SectionTitle";
-
+import { Helmet } from "react-helmet-async";
 
 const ManageCoffee = () => {
    const [coffee, , refetch] = useCoffee();
@@ -26,7 +25,7 @@ const ManageCoffee = () => {
                refetch();
                Swal.fire({
                   title: "Deleted!",
-                  text: `${singleCoffee.name} has been deleted`,
+                  text: `Coffee has been deleted`,
                   icon: "success"
                });
             }
@@ -36,6 +35,9 @@ const ManageCoffee = () => {
 
    return (
       <div>
+         <Helmet>
+            <title>Dashboard | Manage Coffee</title>
+         </Helmet>
          <div>
             <SectionTitle heading={"Manage Coffee"}></SectionTitle>
          </div>
@@ -73,10 +75,20 @@ const ManageCoffee = () => {
                            <td>{singleCoffee.price}$</td>
                            <td>
                               <Link to={`/dashboard/updateCoffee/${singleCoffee._id}`}>
-                                 <button className="custom-update-btn text-white">Update</button>
+                                 <button style={{
+                                    padding: '0px 12px',
+                                    borderRadius: '5px',
+                                    backgroundColor: '#dd9000',
+                                    border: 'none'
+                                 }} className="text-white">Update</button>
                               </Link>
                            </td>
-                           <td><button onClick={() => handleDelete(singleCoffee)} className="custom-delete-btn text-white">Delete</button></td>
+                           <td><button onClick={() => handleDelete(singleCoffee)} style={{
+                              padding: '0px 12px',
+                              borderRadius: '5px',
+                              backgroundColor: '#cf4141',
+                              border: 'none'
+                           }} className="text-white">Delete</button></td>
                         </tr>
                      )
                   }

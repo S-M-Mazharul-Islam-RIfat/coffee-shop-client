@@ -2,11 +2,14 @@ import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../../../Hooks/useAxiosSecure";
 import SectionTitle from "../../../../Components/SectionTitle/SectionTitle";
+import { Helmet } from "react-helmet-async";
+import useAxiosPublic from "../../../../Hooks/useAxiosPublic";
 const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
 const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`;
 
 const AddCoffee = () => {
    const axiosSecure = useAxiosSecure();
+   const axiosPublic = useAxiosPublic();
 
    const {
       register,
@@ -16,7 +19,7 @@ const AddCoffee = () => {
 
    const onSubmit = async (data) => {
       const imageFile = { image: data.image[0] };
-      const res = await axiosSecure.post(image_hosting_api, imageFile, {
+      const res = await axiosPublic.post(image_hosting_api, imageFile, {
          headers: {
             'content-type': 'multipart/form-data'
          }
@@ -46,6 +49,9 @@ const AddCoffee = () => {
    }
    return (
       <div>
+         <Helmet>
+            <title>Dashboard | Add Coffee</title>
+         </Helmet>
          <div>
             <SectionTitle heading={"Add Coffee"}></SectionTitle>
          </div>
@@ -70,14 +76,14 @@ const AddCoffee = () => {
                   </label>
                   <input type="text" {...register("supplier", { required: true })} placeholder="Supplier" className="input input-bordered w-full" />
                </div>
-               <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-32 mt-6">
+               <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-32 mt-6">
                   <div className="form-control w-full">
                      <label className="label">
                         <span className="label-text text-[#000000] font-semibold">*Taste</span>
                      </label>
                      <input type="text" {...register("taste", { required: true })} placeholder="Taste" className="input input-bordered w-full" />
                   </div>
-                  <div className="form-control w-full">
+                  <div className="form-control w-full mt-6 lg:mt-0">
                      <label className="label">
                         <span className="label-text text-[#000000] font-semibold">*Category</span>
                      </label>
@@ -98,7 +104,7 @@ const AddCoffee = () => {
                      <input {...register("image", { required: true })} type="file" className="file-input w-full" />
                   </div>
                </div>
-               <button className="btn bg-[#9b6927] mt-8 text-white cursor-pointer">
+               <button className="btn bg-[#9b6927] mt-7 text-white cursor-pointer">
                   Add Coffee
                </button>
             </form>

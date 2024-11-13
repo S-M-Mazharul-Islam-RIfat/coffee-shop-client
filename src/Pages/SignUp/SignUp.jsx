@@ -109,7 +109,8 @@ const SignUp = () => {
          </Helmet>
 
          <div className="w-[85%] mx-auto">
-            <div className="max-w-md mx-auto bg-[#ffff] p-8 mt-16 rounded-lg shadow-2xl">
+            <div className="max-w-md mx-auto bg-[#ffff] p-8 mt-6 md:mt-10 lg:mt-16 shadow-2xl">
+               <div className="text-[2.5rem] mb-3 font-semibold">Sign up</div>
                <form onSubmit={handleSubmit(onSubmit)}>
                   <div className="form-control">
                      <label className="label">

@@ -13,7 +13,7 @@ const CoffeeGallery = () => {
                Coffee Gallery
             </h2>
          </div>
-         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-10 mt-16 mb-10 overflow-hidden">
+         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-14 mt-16 mb-10 overflow-hidden">
             <div className="card w-[20rem] mx-auto">
                <img
                   src="https://i.ibb.co.com/tmddTG8/cup1.png"

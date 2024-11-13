@@ -5,6 +5,7 @@ import useAuth from "../../../../Hooks/useAuth";
 import { Link } from "react-router-dom";
 import useCart from "../../../../Hooks/useCart";
 import Loader from "../../../Shared/Loader/Loader";
+import { Helmet } from "react-helmet-async";
 
 const MyCart = () => {
    const { user } = useAuth();
@@ -38,6 +39,9 @@ const MyCart = () => {
 
    return (
       <div>
+         <Helmet>
+            <title>Dashboard | My Cart</title>
+         </Helmet>
          <div>
             <SectionTitle heading={"My Cart"}></SectionTitle>
          </div>

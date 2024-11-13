@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import SectionTitle from "../../../../Components/SectionTitle/SectionTitle";
 import useAuth from "../../../../Hooks/useAuth";
 import useOrders from "../../../../Hooks/useOrders";
@@ -9,6 +10,9 @@ const OrderHistory = () => {
 
    return (
       <div>
+         <Helmet>
+            <title>Dashboard | Order History</title>
+         </Helmet>
          <div>
             <SectionTitle heading={'Order History'}></SectionTitle>
          </div>

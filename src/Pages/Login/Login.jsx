@@ -102,11 +102,12 @@ const Login = () => {
    return (
       <div className="h-screen">
          <Helmet>
-            <title>Login</title>
+            <title>Log in</title>
          </Helmet>
 
          <div className="w-[85%] mx-auto">
-            <div className="max-w-md mx-auto bg-[#ffff] p-8 mt-16 rounded-lg shadow-2xl">
+            <div className="max-w-md mx-auto bg-[#ffff] p-8 mt-6 md:mt-10 lg:mt-16 rounded-lg shadow-2xl">
+               <div className="text-[2.5rem] mb-3 font-semibold">Log in</div>
                <form onSubmit={handleSubmit(onSubmit)}>
                   <div className="form-control">
                      <label className="label">
@@ -136,7 +137,7 @@ const Login = () => {
                      </div>
                   </div>
                   <div className="form-control mt-6">
-                     <button className="btn bg-[#F3F5F9] text-[black] hover:bg-slate-200 rounded-lg">Login</button>
+                     <button className="btn bg-[#F3F5F9] text-[black] hover:bg-slate-200 rounded-lg">Log in</button>
                   </div>
                   <div className="mt-4 text-center">
                      <p>Dont have an account? <Link to="/signup"><span className="hover:underline">Sign Up</span></Link> </p>

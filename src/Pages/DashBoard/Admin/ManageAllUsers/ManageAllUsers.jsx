@@ -24,7 +24,7 @@ const ManageAllUsers = () => {
                refetch();
                Swal.fire({
                   title: "Deleted!",
-                  text: `${user.name} has been deleted`,
+                  text: `User has been deleted`,
                   icon: "success"
                });
             }
@@ -54,10 +54,10 @@ const ManageAllUsers = () => {
    return (
       <div>
          <Helmet>
-            <title>Manage All User</title>
+            <title>Dashboard | Manage All Users</title>
          </Helmet>
          <div>
-            <SectionTitle heading={"Manage All User"}></SectionTitle>
+            <SectionTitle heading={"Manage All Users"}></SectionTitle>
          </div>
          <div className="w-full md:w-[85%] mx-auto mt-8">
             <table className="table bg-zinc-300 rounded-lg">
@@ -82,16 +82,31 @@ const ManageAllUsers = () => {
                            <td>
                               {
                                  user?.role == 'user' ?
-                                    <button onClick={() => handleRole(user)} className="custom-update-btn text-white">
+                                    <button onClick={() => handleRole(user)} style={{
+                                       padding: '0px 12px',
+                                       borderRadius: '5px',
+                                       backgroundColor: '#dd9000',
+                                       border: 'none'
+                                    }} className="text-white">
                                        Make Admin
                                     </button>
                                     :
-                                    <button onClick={() => handleRole(user)} className="custom-update-btn text-white">
+                                    <button onClick={() => handleRole(user)} style={{
+                                       padding: '0px 12px',
+                                       borderRadius: '5px',
+                                       backgroundColor: '#dd9000',
+                                       border: 'none'
+                                    }} className="text-white">
                                        Make User
                                     </button>
                               }
                            </td>
-                           <td><button onClick={() => handleDelete(user)} className="custom-delete-btn text-white">Delete</button></td>
+                           <td><button onClick={() => handleDelete(user)} style={{
+                              padding: '0px 12px',
+                              borderRadius: '5px',
+                              backgroundColor: '#cf4141',
+                              border: 'none'
+                           }} className="text-white">Delete</button></td>
                         </tr>
                      )
                   }

@@ -72,7 +72,7 @@ const CoffeeCart = ({ singleCoffee }) => {
             <h2><span className="text-[1.1rem] font-medium">Name: </span>{name}</h2>
             <p><span className="text-[1.1rem] font-medium">Chef: </span>{chef}</p>
             <p><span className="text-[1.1rem] font-medium">Price: </span>{price}$</p>
-            <div className="card-actions gap-5 flex pt-3">
+            <div className="card-actions  flex pt-3">
                <Link to={`/coffee/${_id}`}><button className="btn btn-outline">View Details</button></Link>
                <button disabled={isAdmin} onClick={handleAddToCart} className="btn btn-outline">Order Now</button>
             </div>

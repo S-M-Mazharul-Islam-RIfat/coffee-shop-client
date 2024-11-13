@@ -27,12 +27,12 @@ const Dashboard = () => {
                      className={`fixed top-0 left-0 h-full w-64 bg-[#D2B48C] text-black p-4 z-40 transform transition-transform 
                   ${isOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0 md:relative md:min-h-screen md:flex md:flex-col`}
                   >
-                     <div className="py-4">
+                     <div className="pt-5 pb-2">
                         <NavLink to="/">
-                           <p className="text-center text-[1.8rem] font-semibold pt-2 w-[90%] mx-auto">COFFEE SHOP</p>
+                           <p className="text-center text-[1.8rem] font-semibold pt-3 w-[90%] mx-auto">COFFEE SHOP</p>
                         </NavLink>
                      </div>
-                     <ul className="menu p-4t text-[0.9rem] leading-7">
+                     <ul className="menu p-4 text-[1rem] leading-7">
                         <li className="font-medium">
                            <NavLink to="/dashboard/addCoffee">
                               <IoAddCircleOutline />
@@ -59,7 +59,7 @@ const Dashboard = () => {
                         </li>
                      </ul>
                      <div className="divider m-0 w-52 mx-auto"></div>
-                     <ul className="menu p-4 text-[0.9rem] leading-7">
+                     <ul className="menu p-4 text-[1rem] leading-7">
                         <li className="font-medium">
                            <NavLink to="/">
                               <IoMdHome />
@@ -98,7 +98,7 @@ const Dashboard = () => {
                            <p className="text-center text-[1.8rem] font-semibold pt-2 w-[90%] mx-auto">COFFEE SHOP</p>
                         </NavLink>
                      </div>
-                     <ul className="menu p-4 text-[0.9rem] leading-7">
+                     <ul className="menu p-4 text-[1rem] leading-7">
                         <li className="font-medium">
                            <NavLink to="/dashboard/myCart">
                               <RiListUnordered />
@@ -119,7 +119,7 @@ const Dashboard = () => {
                         </li>
                      </ul>
                      <div className="divider m-0 w-52 mx-auto"></div>
-                     <ul className="menu p-4 text-[0.9rem] leading-7">
+                     <ul className="menu p-4 text-[1rem] leading-7">
                         <li className="font-medium">
                            <NavLink to="/">
                               <IoMdHome />
@@ -144,7 +144,7 @@ const Dashboard = () => {
 
                </div>
          }
-         <div className="flex-1 p-12">
+         <div className="flex-1 p-6">
             <Outlet></Outlet>
          </div>
       </div>
