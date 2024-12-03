@@ -61,7 +61,7 @@ const CoffeeCart = ({ singleCoffee }) => {
    }
 
    return (
-      <div className="card bg-[#F5F4F1] w-96 shadow-2xl mx-auto">
+      <div className="card bg-[#F5F4F1] w-full md:w-[90%] lg:w-[75%] mx-auto">
          <div className="pt-5 mx-auto">
             <img
                src={image}
@@ -72,7 +72,7 @@ const CoffeeCart = ({ singleCoffee }) => {
             <h2><span className="text-[1.1rem] font-medium">Name: </span>{name}</h2>
             <p><span className="text-[1.1rem] font-medium">Chef: </span>{chef}</p>
             <p><span className="text-[1.1rem] font-medium">Price: </span>{price}$</p>
-            <div className="card-actions  flex pt-3">
+            <div className="card-actions flex pt-3 w-full justify-center">
                <Link to={`/coffee/${_id}`}><button className="btn btn-outline">View Details</button></Link>
                <button disabled={isAdmin} onClick={handleAddToCart} className="btn btn-outline">Order Now</button>
             </div>
